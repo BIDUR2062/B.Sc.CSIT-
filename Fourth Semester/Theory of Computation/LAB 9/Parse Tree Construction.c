@@ -1,31 +1,29 @@
 #include <stdio.h>
 
-void printTree(int n, int level) {
-    int i;
-
-    for (i = 0; i < level; i++)
+void indent(int level) {
+    for (int i = 0; i < level; i++)
         printf("    ");
+}
 
+void printTree(int n, int level) {
+    indent(level);
     printf("S\n");
 
     if (n == 1) {
-        for (i = 0; i < level + 1; i++)
-            printf("    ");
-        printf("a\n");
+        indent(level + 1);
+        printf("|-- a\n");
 
-        for (i = 0; i < level + 1; i++)
-            printf("    ");
-        printf("b\n");
+        indent(level + 1);
+        printf("|-- b\n");
     } else {
-        for (i = 0; i < level + 1; i++)
-            printf("    ");
-        printf("a\n");
+        indent(level + 1);
+        printf("|-- a\n");
 
+        indent(level + 1);
         printTree(n - 1, level + 1);
 
-        for (i = 0; i < level + 1; i++)
-            printf("    ");
-        printf("b\n");
+        indent(level + 1);
+        printf("|-- b\n");
     }
 }
 
