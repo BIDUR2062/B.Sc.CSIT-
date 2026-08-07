@@ -33,7 +33,7 @@ int main() {
         printf("b");
 
     printf("\n");
+    printf("\nBIDUR KHANAL\n");
 
     return 0;
-    printf("\nBIDUR KHANAL\n");
 }
