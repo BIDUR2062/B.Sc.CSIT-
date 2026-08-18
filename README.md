@@ -173,7 +173,7 @@ I'm continuously learning, building projects, and improving my development skill
 
 [![GitHub](https://img.shields.io/badge/GitHub-BIDUR2062-181717?style=for-the-badge\&logo=github)](https://github.com/BIDUR2062)
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge\&logo=linkedin\&logoColor=white)](https://www.linkedin.com/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge\&logo=linkedin\&logoColor=white)](https://www.linkedin.com/in/bidur-khanal-a71810209/)
 
 </div>
 
