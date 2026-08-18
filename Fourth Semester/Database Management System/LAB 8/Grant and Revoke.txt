@@ -1,0 +1,36 @@
+This lab is performed in the terminal of the your PC
+
+--create a user name Sam and grant him the CREATE SESSION system privilege 
+--so that he can log in the Oracle Database:
+--Syntax: CREATE USER username DENTIFIED BY password [QUOTA {size | UNLIMITED} ON tablespace]
+create user Sam identified by admin quota unlimited on users;
+
+OR 
+create user Sam identified by admin;
+grant unlimited tablespace to Sam;
+
+GRANT CREATE SESSION TO Sam;
+
+--show the current user
+SELECT sys_context('USERENV','CURRENT_USER') FROM dual;
+
+--Create table 
+create table course(Id int primary key,CourseName varchar(200));
+
+--grant the CREATE TABLE system privilege to
+GRANT CREATE ANY TABLE TO Sam;
+
+--log in to the Database as Sam
+--select data from course table(SELECT *FROM course;)
+--create new table (Create TABLE Department(Id INT, Name VARCHAR(200)));
+--log in to the Database as system
+
+--revoke create table privilege from Sam
+Revoke create any table from Sam;
+grant select,insert on course to Sam;
+
+--login as Sam
+--try to create new table
+select *from system.course;
+delete from system.course;
+
