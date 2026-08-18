@@ -1,0 +1,27 @@
+# Enter configuration mode 
+Switch> enable 
+Switch# configure terminal 
+ 
+# Create VLANs 
+Switch(config)# vlan 2 
+Switch(config-vlan)# name Office 
+Switch(config-vlan)# exit 
+ 
+Switch(config)# vlan 3 
+Switch(config-vlan)# name Home 
+Switch(config-vlan)# exit 
+ 
+# Assign ports to VLANs 
+Switch(config)# interface fastEthernet 0/1 
+Switch(config-if)# switchport mode access 
+Switch(config-if)# switchport access vlan 2 
+Switch(config-if)# exit 
+ 
+Switch(config)# interface fastEthernet 0/2 
+Switch(config-if)# switchport mode access 
+Switch(config-if)# switchport access vlan 3 
+Switch(config-if)# exit 
+ 
+# Save configuration 
+Switch(config)# end 
+Switch# write memory 
